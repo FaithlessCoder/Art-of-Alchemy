@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "artofalchemy",
+  "version": "${version}",
+  "name": "Art of Alchemy II",
+  "description": "An industrial magic mod that allows you to unleash the power of transmutation!",
+  "authors": [
+    "SynthRose",
+    "The Cumulus Team",
+    "Ancurio",
+    "Vaerian"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Cumulus-Mods/Art-of-Alchemy-II",
+    "sources": "https://github.com/Cumulus-Mods/Art-of-Alchemy-II"
+  },
+  "license": "MIT",
+  "icon": "assets/artofalchemy/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.cumulus.artofalchemy.ArtOfAlchemy"
+    ]
+  },
+  "mixins": [
+    "artofalchemy.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  }
+}
