@@ -393,7 +393,7 @@ public class BlockEntitySynthesizer extends BlockEntity implements ImplementedIn
 		} else if (slot == 2 && world.isReceivingRedstonePower(pos)){
 			return false;
 		} else {
-			return true;
+			return isValid(slot, stack);
 		}
 	}
 
