@@ -390,15 +390,21 @@ public class BlockEntitySynthesizer extends BlockEntity implements ImplementedIn
 	public boolean canInsert(int slot, ItemStack stack, Direction dir) {
 		if (slot == 1) {
 			return world.isReceivingRedstonePower(pos) && isValid(slot, stack);
+		} else if (slot == 2 && world.isReceivingRedstonePower(pos)){
+			return false;
 		} else {
-			return isValid(slot, stack);
+			return true;
 		}
 	}
 
 	@Override
 	public boolean canExtract(int slot, ItemStack stack, Direction dir) {
 		if (slot == 1) {
-			return TagRegistry.item(ArtOfAlchemy.id("containers")).contains(stack.getItem());
+			if (TagRegistry.item(ArtOfAlchemy.id("containers")).contains(stack.getItem())) {
+				return false;
+			} else {
+				return true;
+			}
 		} else if (slot == 2) {
 			return world.isReceivingRedstonePower(pos);
 		} else {
